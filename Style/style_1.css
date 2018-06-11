@@ -1,0 +1,444 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Merriweather', Cambria, serif;
+}
+
+body {
+    background-color: rgba(144, 185, 241, 0.33);
+}
+
+.wrapper {
+    max-width: 1000px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: white;
+    position: relative;
+}
+
+header {
+    background-color: rgb(43, 105, 187);
+    padding: 10px 0;
+}
+
+h1 {
+    color: #e2ebf0;
+    font-size: 26px;
+    text-align: center;
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 13% 56% 31%;
+    grid-template-rows: auto;
+    grid-gap: 10px 0;
+}
+
+.menuImg {
+    grid-row: 1;
+    grid-column: 3/4;
+    justify-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    border-radius: 7%;
+    max-width: 95%;
+}
+
+.metal {
+    margin-top: 40px;
+    padding: 10px;
+}
+
+nav {
+    grid-row: 1;
+    grid-column: 1/3;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.menuLeft > li {
+    list-style-type: none;
+    margin: 3px 0 3px 50px;
+}
+
+.contraindications > li {
+    margin-left: 90px;
+    list-style-type: square;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(22, 112, 232);
+    padding: 4px;
+}
+
+a:not(.active):hover {
+    color: #021a69;
+    font-weight: bold;
+}
+
+.active {
+    background-color: rgb(22, 112, 232);
+    color: #e2ebf0;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+.home {
+    font-weight: bold;
+    font-size: 24px;
+    position: relative;
+    display: inline-block;
+}
+
+.home .tooltiptext {
+    visibility: hidden;
+    font-size: 12px;
+    color: rgb(22, 112, 232);
+    border: 1px solid rgb(22, 112, 232);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 110%;
+}
+
+.home .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent rgb(22, 112, 232) transparent transparent;
+}
+
+.home:hover .tooltiptext {
+    visibility: visible;
+}
+
+.content {
+    grid-row: auto;
+    grid-column: 1 / 4;
+    margin: 20px 20px;
+    color: #030355;
+    line-height: 1.4;
+}
+
+.fa:hover {
+    color: #ff0000;
+}
+
+.types {
+    justify-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    grid-column: 1;
+}
+
+.exam {
+    grid-column: 2/4;
+    justify-self: left;
+    -ms-flex-item-align: center;
+    align-self: center;
+    color: #030355;
+    line-height: 1.4;
+}
+
+.scanner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin: 15px 0 10px 0;
+}
+
+.item {
+    -ms-flex-item-align: center;
+    align-self: center;
+}
+
+figcaption {
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+.phenom-text {
+    justify-self: left;
+    -ms-flex-item-align: center;
+    align-self: center;
+    grid-column: 1/3;
+    color: #030355;
+    line-height: 1.4;
+    margin-left: 20px;
+}
+
+.phenom-img {
+    justify-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    grid-column: 3/4;
+    max-width: 95%;
+}
+
+.phenom-img-float {
+    display: none;
+}
+
+footer {
+    height: 40px;
+    background-color: rgb(43, 105, 187);
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.email {
+    text-decoration: none;
+    color: white;
+}
+
+a.email:hover {
+    color: white;
+    font-weight: normal;
+}
+
+/*RESPONSIV*/
+
+/*********************************/
+
+/*Extra small devices (landscape phones, 360px and up)*/
+
+@media (min-width: 360px) {
+
+    h1 {
+        font-size: 20px;
+    }
+    nav {
+        grid-row: 1;
+        grid-column: 1/4;
+        margin-top: 15px;
+        font-size: 16px;
+    }
+    .menuImg {
+        display: none;
+    }
+    .menuLeft > li {
+        margin: 3px 0 3px 20px;
+    }
+    .contraindications > li {
+        margin-left: 30px;
+    }
+    .types {
+        width: 30px;
+        height: 30px;
+    }
+    .phenom-text {
+        grid-column: 1/4;
+        margin-left: 10px;
+    }
+    .phenom-img {
+        display: none;
+    }
+    .phenom-img-float {
+        margin-right: 5px;
+        display: inline;
+        float: left;
+    }
+    footer {
+        height: 25px;
+        background-color: rgb(43, 105, 187);
+        color: white;
+        line-height: 25px;
+        text-align: center;
+        font-size: 10px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+
+@media (min-width: 576px) {
+    nav {
+        grid-row: 1;
+        grid-column: 1/3;
+        margin-top: 15px;
+    }
+    .menuImg {
+        display: block;
+    }
+    .menuLeft > li {
+        margin: 3px 0 3px 30px;
+    }
+    .contraindications > li {
+        margin-left: 90px;
+    }
+    .metal {
+        width: 140px;
+    }
+    .types {
+        width: 40px;
+        height: 40px;
+    }
+    .phenom-text {
+        justify-self: left;
+        -ms-flex-item-align: center;
+        align-self: center;
+        grid-column: 1/3;
+        color: #030355;
+        line-height: 1.4;
+        margin-left: 20px;
+    }
+    .phenom-img {
+        display: block;
+        justify-self: center;
+        -ms-flex-item-align: center;
+        align-self: center;
+        grid-column: 3/4;
+        max-width: 95%;
+    }
+    .phenom-img-float {
+        display: none;
+    }
+    footer {
+        height: 25px;
+        background-color: rgb(43, 105, 187);
+        color: white;
+        line-height: 25px;
+        text-align: center;
+        font-size: 10px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .menuLeft > li {
+        list-style-type: none;
+        margin: 3px 0 3px 50px;
+    }
+    .metal {
+        min-width: 176px;
+    }
+    footer {
+        height: 40px;
+        background-color: rgb(43, 105, 187);
+        color: white;
+        line-height: 40px;
+        text-align: center;
+        font-size: 14px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+}
+
+/*Large devices (desktops, 992px and up)*/
+
+@media (min-width: 992px) {
+    footer {
+        height: 40px;
+        background-color: rgb(43, 105, 187);
+        color: white;
+        line-height: 40px;
+        text-align: center;
+        font-size: 14px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+}
+
+/*Extra small devices (360px and down)*/
+
+@media (max-width: 360px) {
+    h1 {
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    nav {
+        grid-row: 1;
+        grid-column: 1/4;
+        margin: 5px;
+    }
+    .menuImg {
+        display: none;
+    }
+    .menuLeft > li {
+        margin: 3px 0 3px 10px;
+    }
+    .content {
+        margin: 5px 5px 5px 7px;
+    }
+    .types {
+        width: 30px;
+        height: 30px;
+    }
+    .contraindications > li {
+        margin-left: 20px;
+        list-style-type: square;
+    }
+    figure > img {
+        height: 130px;
+    }
+    .phenom-text {
+        margin: 0 10px 0 10px;
+        grid-column: 1/4;
+    }
+    .phenom-img {
+        display: none;
+    }
+    .phenom-img-float {
+        margin-right: 5px;
+        display: inline;
+        float: left;
+        width: 40%;
+    }
+    footer {
+        height: 25px;
+        background-color: rgb(43, 105, 187);
+        color: white;
+        line-height: 25px;
+        text-align: center;
+        font-size: 10px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+}
